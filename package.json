@@ -1,0 +1,26 @@
+{
+  "name": "logsans",
+  "version": "0.0.3",
+  "description": "LogSans Client - LogSans is a companion library for LogSnag. LogSans enables notification for events that have NOT happened in a pre-defined frequency.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
+  },
+  "keywords": [
+    "logsnag"
+  ],
+  "author": "Matías Penela",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.1",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "logsnag": "^0.0.6",
+    "node-fetch": "^2.6.7"
+  }
+}
