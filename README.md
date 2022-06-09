@@ -47,7 +47,7 @@ logsnag.publish({
 
 This will do two things:
 1. ✅ It publishes your event to LogSnag
-2. ✅ Tracks your event on LogSans so that LogSans can alert you when the event does NOT happen within X minutes.  (X being the "frequency" set - more on that below)
+2. ✅ Tracks your event on LogSans so that LogSans can alert you when the event does NOT happen within the last X minutes.  (X being the "frequency" set - more on that below)
 
 ### Tell LogSans When to Check
 Now that you are tracking your events, it is time to tell LogSans how often to check for it.
@@ -69,4 +69,4 @@ More Documentation: https://documenter.getpostman.com/view/10930387/Uz5MFEMj
 Once you create a **Recurring Check**, LogSans alert you if it has not detected your event in the timeframe set by the **frequency** property.
 
 ##### For Example
-If **frequency** is set to 30 (minutes), LogSans will trigger a LogSnag event telling you that it has not seen that event in the last 30 minutes.
+If **frequency** is set to 30 (minutes), LogSans will check every 30 minutes. If it does not detect your event, it will publish a LogSnag event telling you that it has not seen that event in the last 30 minutes.
