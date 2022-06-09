@@ -10,6 +10,10 @@
     "publish-beta": "npm run build && npm publish --tag beta",
     "publish-dryrun": "npm run build && npm publish --dry-run"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twustep/logsans.js.git"
+  },
   "keywords": [
     "logsnag"
   ],
