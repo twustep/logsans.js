@@ -46,8 +46,8 @@ logsnag.publish({
 ```
 
 This will do two things:
-1. ✅ It publishes your event to LogSnag the LogSnag library normally does
-2. ✅ Tracks your event on LogSans so that LogSans can alert you when the event does NOT happen based on your desired freqency (more on that below)
+1. ✅ It publishes your event to LogSnag
+2. ✅ Tracks your event on LogSans so that LogSans can alert you when the event does NOT happen within X minutes.  (X being the "frequency" set - more on that below)
 
 ### Tell LogSans When to Check
 Now that you are tracking your events, it is time to tell LogSans how often to check for it.
