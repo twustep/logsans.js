@@ -54,15 +54,13 @@ Now that you are tracking your events, it is time to tell LogSans how often to c
 
 To do that, user the **Create Recurring Check** endpoint here:
 
-```curl
-curl --location --request PUT 'https://logsans-api.twostep.co/api/check/create' \
---data-raw '{
-    "token": "YOUR-LOGSNAG-TOKEN",
-    "project": "your-logsnag-project",
-    "channel": "your-logsnag-channel",
-    "event": "Your logsnag event",
-    "frequency" : 5 /* in minutes */
-}'
+```js
+logsnag.check({
+    project: "your-logsnag-project",
+    channel: "your-logsnag-channel",
+    event: "Your logsnag event",
+    frequency:20
+});
 ```
 More Documentation: https://documenter.getpostman.com/view/10930387/Uz5MFEMj
 
