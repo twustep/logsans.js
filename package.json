@@ -1,6 +1,6 @@
 {
   "name": "logsans",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "LogSans Client - LogSans is a companion library for LogSnag. LogSans enables notification for events that have NOT happened in a pre-defined frequency.",
   "main": "dist/index.js",
   "scripts": {
