@@ -59,7 +59,7 @@ logsnag.check({
     project: "your-logsnag-project",
     channel: "your-logsnag-channel",
     event: "Your logsnag event",
-    frequency:20
+    frequency:20 /* in minutes */
 });
 ```
 More Documentation: https://documenter.getpostman.com/view/10930387/Uz5MFEMj
