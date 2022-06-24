@@ -1,4 +1,4 @@
 /**
  * LogSans API Endpoint
  */
- export const LOGSANS_ENDPOINT = 'https://logsans-api.twostep.co/api';
+ export const LOGSANS_ENDPOINT = 'http://logsans-api.twostep.co/api';

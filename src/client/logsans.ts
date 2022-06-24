@@ -2,6 +2,7 @@
 import fetch from 'node-fetch';
 import { LogSnag } from 'logsnag';
 import { PublishOptions } from '../types';
+import { CheckOptions } from '../types';
 import { LOGSANS_ENDPOINT } from '../constants';
 import { HTTPResponseError } from './error';
 
@@ -54,5 +55,32 @@ export default class LogSans {
       }
     }
     return publishResult;
+  }
+
+  public async check(options: CheckOptions): Promise<boolean>{
+  
+
+      const method = 'PUT';
+
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+
+      var pingJson = {
+        project: options.project,
+        channel: options.channel,
+        event: options.event,
+        token: this.token,
+        frequency: options.frequency
+      }
+
+      const body = JSON.stringify(pingJson);
+      const response = await fetch(LOGSANS_ENDPOINT + "/check/create", { method, body, headers  });
+
+      if (!response.ok) {
+        throw new HTTPResponseError(response);
+      }
+    
+    return true;
   }
 }
